@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primarycolor: rgb(238, 238, 238);
+    --secondary-color: rgb(27, 27, 27);
+    --tercerycolor: rgb(159, 159, 159);
+    --bg-gradiente-bbw: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(20, 20, 20) 49%, rgb(34, 34, 34) 100%);
+    --bg-gradiente-body: linear-gradient(90deg, rgb(17, 17, 17) 0%, rgb(16, 16, 16) 49%, rgb(17, 17, 17) 100%);
+
+
+} // :root
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--bg-gradiente-body);
+
+    font-family: 'Montserrat';
+    font-weight: 300;
+}
+
+// Cabeçalho principal - Menu de navegação - Inicio
+.header-main {
+    background: var(--bg-gradiente-bbw);
+
+    .container {
+        width: 90dvw;
+        margin: 0 auto;
+    } 
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5em;
+
+        #btn-mobile {
+            display: none;
+        }
+
+        .brand {
+            color: var(--primarycolor);
+            font-size: 1.7em;
+            text-decoration: none;
+
+            transition-property: letter-spacing, color;
+            transition-duration: 1s;
+            &:hover {
+                color: var(--tercerycolor);
+            }
+
+            .brand-span {
+                font-size: 1rem;
+            }
+        } 
+        
+        .header-navbar {
+            display: flex;
+            gap: 1.1em;
+
+            .header-navbar-item {
+                list-style-type: none;
+
+                .header-navbar-link {
+                    text-decoration: none;
+                    color: var(--primarycolor);
+                    font-size: 1em;
+                    padding: 20px 0;
+
+                    transition-property: letter-spacing, color;
+                    transition-duration: 1s;
+                    &:hover {
+                        letter-spacing: 1.5px;
+                        color: var(--tercerycolor);
+                    }
+                }
+            }  
+        }
+    } 
+}
+
+
+@media (max-width: 600px) {
+
+    .header-main .nav-content  {
+        padding: 1.05em;
+    }
+
+    .header-main .nav-content.active .header-navbar {
+        height: calc(100vh - 4em);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .header-main .nav-content #btn-mobile {
+        display: block;
+    }
+
+    .header-main .nav-content .header-navbar {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 3.1em;
+        right: 0;
+        background-color: rgb(52, 52, 52);
+        height: 0;
+        transition: .6s;
+        z-index: 100000; // Valor alto para que fique acima de todos os elementos do site
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .header-main .nav-content .header-navbar .header-navbar-item {
+        margin: 1.5rem 0 1.5rem 2.4rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.304);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+
+        &::after, &::before {
+            content: " ";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            margin-top: 5px;
+            transition: .2s;
+            position: relative;
+        }
+    }
+
+    .nav-content.active #hamburguer {
+        border-top-color: transparent;
+
+        &::before {
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            transform: rotate(-135deg);
+            top: -7px;
+        }
+    }   
+}
+
+
+
+// Cabeçalho principal - Menu de navegação - Fim
+
