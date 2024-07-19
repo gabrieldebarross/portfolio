@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,20 +10,21 @@
     <!-- AOS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
 </head>
 
-<body>  
+<body>
     <header class="header-main">
         <div class="container">
             <div class="nav-content">
                 <a href="" class="brand">Gabriel<span class="brand-span">.dev</span></a>
-                <button id="btn-mobile" aria-label="Abrir menu" aria-haspoppup="true" aria-expanded="false" aria-controls="header-navbar"><span id="hamburguer"></span></button>
-                
+                <button id="btn-mobile" aria-label="Abrir menu" aria-haspoppup="true" aria-expanded="false"
+                    aria-controls="header-navbar"><span id="hamburguer"></span></button>
+
                 <ul class="header-navbar" role="menu">
-                    <li class="header-navbar-item"><a href="" class="header-navbar-link">Inicio</a></li>
+                    <li class="header-navbar-item"><a href="#inicio" class="header-navbar-link">Inicio</a></li>
                     <li class="header-navbar-item"><a href="" class="header-navbar-link">Sobre mim</a></li>
                     <li class="header-navbar-item"><a href="" class="header-navbar-link">Projetos</a></li>
                     <li class="header-navbar-item"><a href="" class="header-navbar-link">Contato</a></li>
@@ -31,6 +32,26 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <div class="container">
+            <div id="inicio">
+                <div class="inicio-i">
+                    <div class="inicio-i-t">
+                        <h2>Olá, eu sou o</h2>
+                        <span>Gabriel de Barros :)</span>
+                        <p>Desenvolvedor Front-End</p>
+                    </div>
+                    <div class="inicio-i-actions">
+                        <a href="assets/curriculum-gabrieldebarros-frontend.pdf" class="downloadcv" download="">Download CV</a>
+                        <a href="" class="contato" target="_blank">Entrar em contato</a>
+                    </div>
+                </div>
+                <div class="inicio-img">
+                    <a href="#"><img src="images/perfil.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script>
         AOS.init();
