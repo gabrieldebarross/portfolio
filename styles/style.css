@@ -5,6 +5,8 @@
   --tercerycolor: rgb(159, 159, 159);
   --bg-gradiente-bbw: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(20, 20, 20) 49%, rgb(34, 34, 34) 100%);
   --bg-gradiente-body: linear-gradient(90deg, rgb(17, 17, 17) 0%, rgb(16, 16, 16) 49%, rgb(17, 17, 17) 100%);
+  --colorspan: #3038d3;
+  --colorspan-gradient: linear-gradient(90deg, #3038d3 0%, #030dc1 79%, #010884 100%);
 }
 
 body {
@@ -16,18 +18,19 @@ body {
   font-weight: 300;
 }
 
-.header-main {
-  background: var(--bg-gradiente-bbw);
-}
-.header-main .container {
+.container {
   width: 90dvw;
   margin: 0 auto;
+}
+
+.header-main {
+  background: var(--bg-gradiente-bbw);
 }
 .header-main .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5em;
+  padding: 1em 0;
 }
 .header-main .nav-content #btn-mobile {
   display: none;
@@ -44,6 +47,7 @@ body {
 }
 .header-main .nav-content .brand .brand-span {
   font-size: 1rem;
+  color: var(--colorspan);
 }
 .header-main .nav-content .header-navbar {
   display: flex;
@@ -65,15 +69,116 @@ body {
   color: var(--tercerycolor);
 }
 
+#inicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+  height: calc(100dvh - 8em);
+}
+#inicio .inicio-i {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#inicio .inicio-i .inicio-i-t {
+  color: var(--primarycolor);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: .8em;
+  gap: .3em;
+  width: 100%;
+  font-size: 2.3em;
+}
+#inicio .inicio-i .inicio-i-t h2 {
+  font-weight: 400;
+  margin: 0;
+}
+#inicio .inicio-i .inicio-i-t span {
+  color: var(--colorspan);
+  font-weight: 700;
+  margin: 0;
+}
+#inicio .inicio-i .inicio-i-t p {
+  color: rgba(231, 231, 231, 0.668);
+  font-weight: 400;
+  font-size: .6em;
+  margin: 0;
+}
+#inicio .inicio-i .inicio-i-actions {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+#inicio .inicio-i .inicio-i-actions a:is(.downloadcv) {
+  color: var(--primarycolor);
+  padding: .8em 1em;
+  background: var(--colorspan-gradient);
+  border-radius: 20px 30px;
+  border: 1px solid white;
+  text-decoration: none;
+  margin: 0;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  text-align: center;
+  transition-property: font-size;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+#inicio .inicio-i .inicio-i-actions a:is(.downloadcv):hover {
+  font-size: .95em;
+}
+#inicio .inicio-i .inicio-i-actions a:not(.downloadcv) {
+  text-align: center;
+  color: var(--primarycolor);
+  padding: .8em 1em;
+  border-radius: 20px 30px;
+  border: 1px solid white;
+  text-decoration: none;
+  margin: 0;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  text-align: center;
+  transition-property: font-size;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+#inicio .inicio-i .inicio-i-actions a:not(.downloadcv):hover {
+  font-size: .95em;
+}
+#inicio .inicio-img {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+}
+#inicio .inicio-img a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#inicio .inicio-img a img {
+  width: 28dvw;
+  border-radius: 5dvw 8dvw 1dvw 15dvw;
+  transition-property: width, border-radius;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
+#inicio .inicio-img a img:hover {
+  width: 29dvw;
+  border-radius: 8dvw 5dvw 15dvw 1dvw;
+}
+
 @media (max-width: 600px) {
+  .header-main .nav-content .brand {
+    font-size: 1.3rem;
+  }
+
   .header-main .nav-content {
     padding: 1.05em;
   }
 
   .header-main .nav-content.active .header-navbar {
-    height: calc(100vh - 4em);
+    height: calc(100vh - 4.1em);
     visibility: visible;
-    overflow-y: auto;
   }
 
   .header-main .nav-content #btn-mobile {
@@ -86,7 +191,7 @@ body {
     width: 100%;
     top: 3.1em;
     right: 0;
-    background-color: #343434;
+    background: var(--bg-gradiente-bbw);
     height: 0;
     transition: .6s;
     z-index: 100000;
@@ -97,6 +202,7 @@ body {
   .header-main .nav-content .header-navbar .header-navbar-item {
     margin: 1.5rem 0 1.5rem 2.4rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.304);
+    padding-bottom: 10px;
   }
 
   #btn-mobile {
@@ -113,6 +219,7 @@ body {
     display: block;
     width: 20px;
     border-top: 2px solid;
+    color: var(--primarycolor);
   }
   #hamburguer::after, #hamburguer::before {
     content: " ";
