@@ -259,7 +259,7 @@ body {
 }
 
 #projetos {
-  margin-bottom: 30em;
+  margin-bottom: 3em;
 }
 #projetos h2 {
   text-align: center;
@@ -281,7 +281,6 @@ body {
   color: var(--primarycolor);
   font-size: 1.2em;
   font-weight: 350;
-  text-decoration: underline var(--colorspan);
 }
 #projetos .todosprojetos .projetos-cards {
   display: flex;
@@ -296,9 +295,16 @@ body {
 #projetos .todosprojetos .projetos-cards .projetos-box {
   margin: 0 auto;
   width: 25em;
+  cursor: pointer;
+  transition-property: width;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+#projetos .todosprojetos .projetos-cards .projetos-box:hover {
+  width: 26em;
 }
 #projetos .todosprojetos .projetos-cards .projetos-box .cover {
-  background-image: url(../images/gst_bg_070_01.jpg);
+  background-image: url(../images/cafe.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -306,10 +312,68 @@ body {
   width: 100%;
   height: 18em;
   border-radius: 5px 5px 0 0;
-  border-bottom: 3px solid var(--colorspan);
+  border-bottom: 5px solid var(--primarycolor);
+  transition-property: border-bottom;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+}
+#projetos .todosprojetos .projetos-cards .projetos-box .cover:hover {
+  border-bottom: 5px solid red;
 }
 #projetos .todosprojetos .projetos-cards .projetos-box .descricao {
   color: white;
+}
+
+#contatos h2 {
+  color: var(--primarycolor);
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+}
+#contatos .contatos-box {
+  margin-bottom: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 0 auto 5em;
+}
+#contatos .contatos-box a {
+  text-decoration: none;
+  border: none;
+}
+#contatos .contatos-box a .contatos-box-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15em;
+  height: auto;
+  padding: 2em;
+}
+#contatos .contatos-box a .contatos-box-cards img {
+  width: 3em;
+  margin: 0 0 1em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 20px 30px 5px 30px;
+}
+#contatos .contatos-box a .contatos-box-cards h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0 0 .2em;
+}
+#contatos .contatos-box a .contatos-box-cards p {
+  margin: 0;
+  color: var(--primarycolor);
+  font-size: 1em;
+}
+
+footer {
+  background: var(--bg-gradiente-bbw);
+  color: var(--primarycolor);
+  padding: 20px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
