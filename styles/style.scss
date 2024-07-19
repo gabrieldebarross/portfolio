@@ -11,6 +11,14 @@
 
 } // :root
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--colorspan);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -145,14 +153,6 @@ body {
                 margin: 0;
                 font-size: clamp(.8rem, 1.5vw, 1rem);
                 text-align: center;
-
-                transition-property: font-size;
-                transition-duration: 1s;
-                transition-timing-function: ease;
-
-                &:hover {
-                    font-size: .95em;
-                }
             }
 
             a:not(.downloadcv) {
@@ -165,14 +165,6 @@ body {
                 margin: 0;
                 font-size: clamp(.8rem, 1.5vw, 1rem);
                 text-align: center;
-
-                transition-property: font-size;
-                transition-duration: 1s;
-                transition-timing-function: ease;
-
-                &:hover {
-                    font-size: .95em;
-                }
             }
         }
     }

@@ -9,6 +9,14 @@
   --colorspan-gradient: linear-gradient(90deg, #3038d3 0%, #030dc1 79%, #010884 100%);
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--colorspan);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -127,12 +135,6 @@ body {
   margin: 0;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   text-align: center;
-  transition-property: font-size;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-}
-#inicio .inicio-i .inicio-i-actions a:is(.downloadcv):hover {
-  font-size: .95em;
 }
 #inicio .inicio-i .inicio-i-actions a:not(.downloadcv) {
   text-align: center;
@@ -144,12 +146,6 @@ body {
   margin: 0;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   text-align: center;
-  transition-property: font-size;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-}
-#inicio .inicio-i .inicio-i-actions a:not(.downloadcv):hover {
-  font-size: .95em;
 }
 #inicio .inicio-img {
   display: flex;
