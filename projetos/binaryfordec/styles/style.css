@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(2,202,202,1) 54%, rgba(2,175,175,1) 100%);
+}
+
+form {
+    padding: 10px;
+    margin: 10px;
+}
+
+fieldset {
+    border: 2px solid black;
+    padding: 10px; 
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px; 
+}
+
+legend {
+    margin: 0 auto;
+    font-size: 2em;
+    margin-bottom: 10px; 
+    padding: 0 10px; 
+    background-color: white; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+    display: block;
+    text-align: center;
+}
+
+label {
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    margin: 0;
+}
+
+#input {
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    max-width: 6.5em;
+
+    transition: 1s;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#input.error {
+    border: 1px solid red;
+    color: red;
+}
+
+p {
+    margin: .5em 0;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
+p span.active {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+
+    padding: 0 5px;
+    border-bottom: 1px solid black;
+}
+
+p span.error {
+    color: red;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: aqua;
+    width: 100%;
+    font-size: 1em;
+    letter-spacing: 1px;
+
+    transition: .5s;
+}
+
+button:hover {
+    background-color: rgb(1, 208, 208);
+    color: white;
+}

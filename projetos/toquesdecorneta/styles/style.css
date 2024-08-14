@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    background-color: rgb(244, 244, 244);
+}
+
+header {
+    background: linear-gradient(90deg, rgba(0, 151, 57, 1) 0%, rgba(1, 115, 44, 1) 51%, rgb(0, 100, 38) 100%);
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+}
+
+header img {
+    height: 3.5em;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.title {
+    text-align: center;
+    margin-top: .5em;
+    font-size: 2em;
+    color: #009739;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin: 1em 1em;
+}
+
+main .toque {
+    margin: 0;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5px black;
+    border-radius: 1em;
+    width: 20em;
+}
+
+main .toque audio {
+    box-shadow: 1px 1px 3px black;
+    border-radius: 1em;
+    width: 100%;
+}
+
+main .toque h2 {
+    font-size: 2em;
+    color: black;
+}
+
+footer {
+    background: linear-gradient(90deg, rgba(0, 151, 57, 1) 0%, rgba(1, 115, 44, 1) 51%, rgb(0, 100, 38) 100%);
+    color: white;
+    padding: 1em;
+}
+
+footer p {
+    text-align: center;
+}

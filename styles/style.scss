@@ -303,7 +303,7 @@ body {
         color: white;
         font-weight: 400;
         font-size: 2em;
-        margin: 0;
+        margin: 1em 0;
 
         transition: 1s;
 
@@ -332,17 +332,21 @@ body {
             width: 100%;
             margin: 0 auto;
 
+            .coverlink {
+                text-decoration: none;
+                box-sizing: border-box;
+
+                width: 26em;
+            }
+
             .projetos-box {
                 margin: 0 auto;
-                width: 25em;
                 cursor: pointer;
 
                 transition-property: width;
                 transition-duration: .5s;
                 transition-timing-function: ease-in-out;
-                &:hover {
-                    width: 26em;
-                }
+
 
                 .cover {
                     background-image: url(../images/cafe.png);
@@ -361,6 +365,45 @@ body {
                     transition-timing-function: ease-in-out;
                     &:hover {
                         border-bottom: 5px solid red;
+                    }
+                }
+
+                .cover-img1 {
+                    background-image: url(../images/projetosimages/deploy-borderradius.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    filter: brightness(1);
+                    border-bottom: 5px solid var(--primarycolor);
+
+                    &:hover {
+                        border-bottom: 5px solid green;
+                    }
+                }
+
+                .cover-img2 {
+                    background-image: url(../images/projetosimages/deploy-binaryfordec.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    filter: brightness(1);
+                    border-bottom: 5px solid var(--primarycolor);
+
+                    &:hover {
+                        border-bottom: 5px solid green;
+                    }
+                }
+
+                .cover-img3 {
+                    background-image: url(../images/projetosimages/deploy-toquesdecorneta.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    filter: brightness(1);
+                    border-bottom: 5px solid var(--primarycolor);
+
+                    &:hover {
+                        border-bottom: 5px solid green;
                     }
                 }
 
